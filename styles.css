@@ -1,0 +1,83 @@
+:root {
+  --paper: #f6f5f1;
+  --ink: #191a17;
+  --muted: #6e716a;
+  --line: #dedfd8;
+  --accent: #e76539;
+  --shell: min(1320px, calc(100vw - 40px));
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+.shell { width: var(--shell); margin-inline: auto; }
+
+.nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 10px; font: 800 18px/1 "Manrope"; }
+.brand span { width: 17px; height: 17px; border: 4px solid var(--accent); border-radius: 5px; transform: rotate(12deg); }
+.nav-link { color: var(--muted); font-size: 14px; }
+.nav-link:hover { color: var(--ink); }
+
+.hero { padding: 96px 0 66px; text-align: center; }
+.eyebrow { margin: 0; color: var(--accent); font-weight: 700; font-size: 12px; letter-spacing: .17em; text-transform: uppercase; }
+h1 { margin: 14px 0 0; color: var(--accent); font: 800 clamp(68px, 12vw, 142px)/.98 "Manrope"; letter-spacing: -.08em; }
+.subtitle { margin: 20px auto 0; font: 700 clamp(22px, 3vw, 35px)/1.2 "Manrope"; letter-spacing: -.035em; }
+.abstract { max-width: 1020px; margin: 34px auto 0; text-align: left; }
+.abstract h2 { margin: 0 0 12px; text-align: center; font: 700 20px/1.2 "Manrope"; letter-spacing: -.025em; }
+.abstract p { margin: 0; padding: 20px 22px; color: #4f524c; background: #ececea; border-radius: 10px; font-size: 14.5px; line-height: 1.58; text-align: justify; }
+.abstract strong { color: var(--ink); font-weight: 700; }
+.gallery { padding-bottom: 110px; }
+.result-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.result-card { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: white; box-shadow: 0 13px 36px rgba(28,31,25,.055); }
+.case-stage { position: relative; aspect-ratio: 1; }
+.input-panel, .model-panel { position: relative; margin: 0; min-width: 0; }
+.model-panel { width: 100%; height: 100%; background: #fff; }
+.model-panel video { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.model-panel > span { position: absolute; top: 14px; right: 15px; z-index: 2; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.input-panel { position: absolute; left: 12px; bottom: 12px; z-index: 3; width: 31%; aspect-ratio: 1; padding: 0; overflow: hidden; border: 2px solid white; border-radius: 11px; background: #ecebe7; box-shadow: 0 4px 14px rgba(20,22,18,.17); }
+.input-panel img { width: 100%; height: 100%; object-fit: contain; }
+.input-panel > span { position: absolute; top: 5px; left: 6px; z-index: 2; padding: 2px 5px; color: #fff; background: rgba(20,20,18,.62); border-radius: 4px; font-size: 7px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.result-card > header { padding: 13px 15px 15px; border-top: 1px solid #ecece8; }
+.result-card h2 { margin: 0; font: 700 16px/1.2 "Manrope"; letter-spacing: -.02em; }
+
+footer { display: flex; justify-content: space-between; padding: 28px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+footer strong { color: var(--ink); font-family: "Manrope"; }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 980px) {
+  .result-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  :root { --shell: min(100% - 26px, 1120px); }
+  .hero { padding: 78px 0 65px; }
+  h1 { letter-spacing: -.065em; }
+  .abstract { margin-top: 28px; }
+  .abstract p { padding: 17px; font-size: 13.5px; line-height: 1.58; text-align: left; }
+  .result-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .result-card { border-radius: 14px; }
+  .result-card > header { padding: 10px 11px 12px; }
+  .result-card h2 { font-size: 13px; }
+  .input-panel { left: 8px; bottom: 8px; width: 34%; border-radius: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
