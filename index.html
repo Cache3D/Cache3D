@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cache3D — selected image-to-3D generation results.">
+  <meta name="description" content="Cache3D — qualitative comparisons with full inference, EasyCache, and ToCa.">
   <meta property="og:title" content="Cache3D">
-  <meta property="og:description" content="Selected image-to-3D generation results from Cache3D.">
-  <meta property="og:image" content="assets/posters/flower.webp">
+  <meta property="og:description" content="Qualitative comparisons with full inference, EasyCache, and ToCa.">
+  <meta property="og:image" content="assets/comparisons/workshop/cache3d.webp">
   <title>Cache3D — Project Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=abstract-box-1">
+  <link rel="stylesheet" href="styles.css?v=comparison-grid-1">
 </head>
 <body>
   <nav class="nav shell">
@@ -30,21 +30,58 @@
       </section>
     </header>
 
-    <section class="gallery shell" id="results" aria-label="Selected Cache3D results">
-      <div class="result-grid">
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/flower.webp" aria-label="Rotating Cache3D flower arrangement"><source src="assets/videos/flower.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/flower.webp" alt="Flower arrangement input image"></figure></div></div><header><h2>Flower arrangement</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/gardener.webp" aria-label="Rotating Cache3D gardener"><source src="assets/videos/gardener.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/gardener.webp" alt="Gardener input image"></figure></div></div><header><h2>Gardener</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/robot.webp" aria-label="Rotating Cache3D robot"><source src="assets/videos/robot.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/robot.webp" alt="Robot input image"></figure></div></div><header><h2>Retro robot</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/chair.webp" aria-label="Rotating Cache3D ornate chair"><source src="assets/videos/chair.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/chair.webp" alt="Ornate chair input image"></figure></div></div><header><h2>Ornate chair</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/pineapple.webp" aria-label="Rotating Cache3D pineapple"><source src="assets/videos/pineapple.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/pineapple.webp" alt="Pineapple input image"></figure></div></div><header><h2>Pineapple</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/blaster.webp" aria-label="Rotating Cache3D sci-fi blaster"><source src="assets/videos/blaster.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/blaster.webp" alt="Sci-fi blaster input image"></figure></div></div><header><h2>Sci-fi blaster</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/hourglass.webp" aria-label="Rotating Cache3D hourglass"><source src="assets/videos/hourglass.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/hourglass.webp" alt="Hourglass input image"></figure></div></div><header><h2>Hourglass</h2></header></article>
-        <article class="result-card reveal"><div class="case-stage"><div class="model-panel"><span>Cache3D</span><video autoplay muted loop playsinline preload="metadata" poster="assets/posters/mage.webp" aria-label="Rotating Cache3D fantasy sculpture"><source src="assets/videos/mage.mp4" type="video/mp4"></video><figure class="input-panel"><span>Input</span><img src="assets/inputs/mage.webp" alt="Fantasy sculpture input image"></figure></div></div><header><h2>Fantasy sculpture</h2></header></article>
+    <section class="gallery shell" id="results" aria-labelledby="results-title">
+      <header class="section-heading">
+        <p class="eyebrow">Qualitative comparison</p>
+        <h2 id="results-title">Preserving local structure under caching</h2>
+        <p>All results use the same input, seed, and camera pose. Cache3D remains closer to full inference than EasyCache and the token-wise ToCa adaptation.</p>
+      </header>
+
+      <div class="case-list">
+        <article class="comparison-card reveal">
+          <header><span>01</span><h3>Magical workshop</h3></header>
+          <div class="comparison-grid">
+            <figure><figcaption>Full</figcaption><img src="assets/comparisons/workshop/full.webp" alt="Full inference result for the magical workshop"></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img src="assets/comparisons/workshop/cache3d.webp" alt="Cache3D result for the magical workshop"></figure>
+            <figure><figcaption>EasyCache</figcaption><img src="assets/comparisons/workshop/easycache.webp" alt="EasyCache result for the magical workshop"></figure>
+            <figure><figcaption>ToCa</figcaption><img src="assets/comparisons/workshop/toca.webp" alt="ToCa result for the magical workshop"></figure>
+          </div>
+        </article>
+
+        <article class="comparison-card reveal">
+          <header><span>02</span><h3>Interior scene</h3></header>
+          <div class="comparison-grid">
+            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/interior/full.webp" alt="Full inference result for the interior scene"></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/interior/cache3d.webp" alt="Cache3D result for the interior scene"></figure>
+            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/interior/easycache.webp" alt="EasyCache result for the interior scene"></figure>
+            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/interior/toca.webp" alt="ToCa result for the interior scene"></figure>
+          </div>
+        </article>
+
+        <article class="comparison-card reveal">
+          <header><span>03</span><h3>Mediterranean villa</h3></header>
+          <div class="comparison-grid">
+            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/villa/full.webp" alt="Full inference result for the Mediterranean villa"></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/villa/cache3d.webp" alt="Cache3D result for the Mediterranean villa"></figure>
+            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/villa/easycache.webp" alt="EasyCache result for the Mediterranean villa"></figure>
+            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/villa/toca.webp" alt="ToCa result for the Mediterranean villa"></figure>
+          </div>
+        </article>
+
+        <article class="comparison-card reveal">
+          <header><span>04</span><h3>Potion cabinet</h3></header>
+          <div class="comparison-grid">
+            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/potions/full.webp" alt="Full inference result for the potion cabinet"></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/potions/cache3d.webp" alt="Cache3D result for the potion cabinet"></figure>
+            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/potions/easycache.webp" alt="EasyCache result for the potion cabinet"></figure>
+            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/potions/toca.webp" alt="ToCa result for the potion cabinet"></figure>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="shell"><strong>Cache3D</strong><span>Project page · 2026</span></footer>
-  <script src="script.js?v=abstract-box-1"></script>
+  <script src="script.js?v=comparison-grid-1"></script>
 </body>
 </html>
