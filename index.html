@@ -6,12 +6,12 @@
   <meta name="description" content="Cache3D — qualitative comparisons with full inference, EasyCache, and ToCa.">
   <meta property="og:title" content="Cache3D">
   <meta property="og:description" content="Qualitative comparisons with full inference, EasyCache, and ToCa.">
-  <meta property="og:image" content="assets/comparisons/workshop/cache3d.webp">
+  <meta property="og:image" content="assets/comparison_videos/workshop/cache3d.webp">
   <title>Cache3D — Project Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=comparison-grid-1">
+  <link rel="stylesheet" href="styles.css?v=comparison-video-1">
 </head>
 <body>
   <nav class="nav shell">
@@ -34,47 +34,47 @@
       <header class="section-heading">
         <p class="eyebrow">Qualitative comparison</p>
         <h2 id="results-title">Preserving local structure under caching</h2>
-        <p>All results use the same input, seed, and camera pose. Cache3D remains closer to full inference than EasyCache and the token-wise ToCa adaptation.</p>
+        <p>All results use the same input and seed. The synchronized turntables show how Cache3D preserves local structure more faithfully than EasyCache and the token-wise ToCa adaptation.</p>
       </header>
 
       <div class="case-list">
         <article class="comparison-card reveal">
           <header><span>01</span><h3>Magical workshop</h3></header>
           <div class="comparison-grid">
-            <figure><figcaption>Full</figcaption><img src="assets/comparisons/workshop/full.webp" alt="Full inference result for the magical workshop"></figure>
-            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img src="assets/comparisons/workshop/cache3d.webp" alt="Cache3D result for the magical workshop"></figure>
-            <figure><figcaption>EasyCache</figcaption><img src="assets/comparisons/workshop/easycache.webp" alt="EasyCache result for the magical workshop"></figure>
-            <figure><figcaption>ToCa</figcaption><img src="assets/comparisons/workshop/toca.webp" alt="ToCa result for the magical workshop"></figure>
+            <figure><figcaption>Full</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/workshop/full.webp" aria-label="Full inference turntable for the magical workshop"><source src="assets/comparison_videos/workshop/full.mp4" type="video/mp4"></video></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/workshop/cache3d.webp" aria-label="Cache3D turntable for the magical workshop"><source src="assets/comparison_videos/workshop/cache3d.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>EasyCache</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/workshop/easycache.webp" aria-label="EasyCache turntable for the magical workshop"><source src="assets/comparison_videos/workshop/easycache.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>ToCa</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/workshop/toca.webp" aria-label="ToCa turntable for the magical workshop"><source src="assets/comparison_videos/workshop/toca.mp4" type="video/mp4"></video></figure>
           </div>
         </article>
 
         <article class="comparison-card reveal">
           <header><span>02</span><h3>Interior scene</h3></header>
           <div class="comparison-grid">
-            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/interior/full.webp" alt="Full inference result for the interior scene"></figure>
-            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/interior/cache3d.webp" alt="Cache3D result for the interior scene"></figure>
-            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/interior/easycache.webp" alt="EasyCache result for the interior scene"></figure>
-            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/interior/toca.webp" alt="ToCa result for the interior scene"></figure>
+            <figure><figcaption>Full</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/interior/full.webp" aria-label="Full inference turntable for the interior scene"><source src="assets/comparison_videos/interior/full.mp4" type="video/mp4"></video></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/interior/cache3d.webp" aria-label="Cache3D turntable for the interior scene"><source src="assets/comparison_videos/interior/cache3d.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>EasyCache</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/interior/easycache.webp" aria-label="EasyCache turntable for the interior scene"><source src="assets/comparison_videos/interior/easycache.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>ToCa</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/interior/toca.webp" aria-label="ToCa turntable for the interior scene"><source src="assets/comparison_videos/interior/toca.mp4" type="video/mp4"></video></figure>
           </div>
         </article>
 
         <article class="comparison-card reveal">
-          <header><span>03</span><h3>Mediterranean villa</h3></header>
+          <header><span>03</span><h3>Mechanical turret</h3></header>
           <div class="comparison-grid">
-            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/villa/full.webp" alt="Full inference result for the Mediterranean villa"></figure>
-            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/villa/cache3d.webp" alt="Cache3D result for the Mediterranean villa"></figure>
-            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/villa/easycache.webp" alt="EasyCache result for the Mediterranean villa"></figure>
-            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/villa/toca.webp" alt="ToCa result for the Mediterranean villa"></figure>
+            <figure><figcaption>Full</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/machine/full.webp" aria-label="Full inference turntable for the mechanical turret"><source src="assets/comparison_videos/machine/full.mp4" type="video/mp4"></video></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/machine/cache3d.webp" aria-label="Cache3D turntable for the mechanical turret"><source src="assets/comparison_videos/machine/cache3d.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>EasyCache</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/machine/easycache.webp" aria-label="EasyCache turntable for the mechanical turret"><source src="assets/comparison_videos/machine/easycache.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>ToCa</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/machine/toca.webp" aria-label="ToCa turntable for the mechanical turret"><source src="assets/comparison_videos/machine/toca.mp4" type="video/mp4"></video></figure>
           </div>
         </article>
 
         <article class="comparison-card reveal">
-          <header><span>04</span><h3>Potion cabinet</h3></header>
+          <header><span>04</span><h3>Fantasy warrior</h3></header>
           <div class="comparison-grid">
-            <figure><figcaption>Full</figcaption><img loading="lazy" src="assets/comparisons/potions/full.webp" alt="Full inference result for the potion cabinet"></figure>
-            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><img loading="lazy" src="assets/comparisons/potions/cache3d.webp" alt="Cache3D result for the potion cabinet"></figure>
-            <figure><figcaption>EasyCache</figcaption><img loading="lazy" src="assets/comparisons/potions/easycache.webp" alt="EasyCache result for the potion cabinet"></figure>
-            <figure><figcaption>ToCa</figcaption><img loading="lazy" src="assets/comparisons/potions/toca.webp" alt="ToCa result for the potion cabinet"></figure>
+            <figure><figcaption>Full</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/warrior/full.webp" aria-label="Full inference turntable for the fantasy warrior"><source src="assets/comparison_videos/warrior/full.mp4" type="video/mp4"></video></figure>
+            <figure class="ours"><figcaption>Cache3D <em>Ours</em></figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/warrior/cache3d.webp" aria-label="Cache3D turntable for the fantasy warrior"><source src="assets/comparison_videos/warrior/cache3d.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>EasyCache</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/warrior/easycache.webp" aria-label="EasyCache turntable for the fantasy warrior"><source src="assets/comparison_videos/warrior/easycache.mp4" type="video/mp4"></video></figure>
+            <figure><figcaption>ToCa</figcaption><video autoplay muted loop playsinline preload="metadata" poster="assets/comparison_videos/warrior/toca.webp" aria-label="ToCa turntable for the fantasy warrior"><source src="assets/comparison_videos/warrior/toca.mp4" type="video/mp4"></video></figure>
           </div>
         </article>
       </div>
@@ -82,6 +82,6 @@
   </main>
 
   <footer class="shell"><strong>Cache3D</strong><span>Project page · 2026</span></footer>
-  <script src="script.js?v=comparison-grid-1"></script>
+  <script src="script.js?v=comparison-video-1"></script>
 </body>
 </html>
